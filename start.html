@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<script language="javascript" type="text/javascript" src="p5.js"></script>
+<script language="javascript" src="p5.dom.js"></script>
+<script language="javascript" src="p5.sound.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script language="javascript" src="start.js"></script>
+<script type="text/javascript" src="start.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+<style>
+
+body{
+	background-color:black;
+}
+
+#video{
+	display:none;
+}
+
+#background{
+	background-size:cover;
+	background-repeat:no-repeat;
+	max-width:100%;
+	max-height:100%;
+	display:none;
+}
+
+#start{
+	position:absolute;
+	top:50%;
+	left:47%;
+}
+
+
+</style>
+
+<script>
+
+/*var x = 10;
+var y = 0;
+var height2 = 20;
+var width2 = 20;
+
+
+function setup(){
+	smooth();
+}
+
+function draw(){
+	background(0);
+	rect(20,20,20,20);
+	fill(0,0,random(0,255));
+	ellipse(x+2,y+20,width2,height2);
+	fill(random(0,255),0,0);
+	rect(x-6,y+32,width2-2,height2+20);
+	fill(0,0,0);
+	rect(x,y+30,width2-15,height2+20);
+	line(x,y+35,x-10,y+55);
+	line(x+2,y+35,x+14,y+55);
+	line(x,y+65,x+10,y+80);
+	line(x+2,y+65,x-10,y+80);
+}*/
+
+
+
+
+
+$(document).ready(function(){
+	$('#start').fadeIn(2000);
+	$("#background").fadeIn(5500);
+
+	$("#start").click(function(){
+		$("#background").fadeOut(2000);
+		$("#start").fadeOut(2000);
+		$("#video").delay(3500).fadeIn(2000);
+		$("#continue").delay(15000).fadeIn(2000);
+		$("#continue").click(function(){
+			$('#video').fadeOut(1000);
+			$("#continue").fadeOut(1000);
+			$("#main2").delay(2500).fadeIn(1000);
+			$("#click").delay(2500).fadeIn(1000);
+			$("#second").delay(3000).fadeIn(1000);
+			$("#third").delay(4000).fadeIn(1000);
+			$("#main2").click(function(){
+				$("#click").fadeOut(1000);
+				$("#second").fadeOut(2000);
+				$("#third").fadeOut(2000);
+				$("#forth").delay(2000).fadeIn(2000);
+				$("#playerimage").delay(3500).fadeIn(2000);
+				$("#fifth").delay(3500).fadeIn(2000);
+				$("#control123").delay(3500).fadeIn(2000);
+				$("#letsplay").delay(3500).fadeIn(2000);
+				$("#letsplay").click(function(){
+					window.location.href="index.html";
+				});
+			});
+
+
+		});
+	});
+
+});
+
+
+
+
+
+</script>
+
+</head>
+
+<body>
+<div style="text-align:center; background-color:black;" id="main">
+<div id="mainpage"></div>
+
+<img id="background" src="bg.jpg">
+<button id="start" class="btn-danger" style="font-family: 'Pacifico', cursive; display:none;"><h4>Let's Go</h4></button>
+
+
+
+<audio id="audio" autoplay loop>
+	<source src="bgm.mp3">
+</audio>
+
+<video id="video" style="text-align:center; background-size:cover; max-width: 80%; max-height: 80%;" controls="center">
+
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+<button style="position:absolute; top:1%; left:47%; display:none; font-family: 'Raleway', sans-serif;" id="continue"><h5>Continue</h5></button>
+
+
+</div>
+
+
+<div style="background-color:black; text-align:center; display:none; height:1000px" id="main2">
+
+<p style="color:white; display:none;" id="click">(Click Anywhere To Continue)</p>
+
+
+<h3 style="color:white; font-family: 'Raleway', sans-serif; display:none; margin-top:120px;" id="second">Everyday our rights are getting burned. We need to stop this.</h3>
+
+<h3 style="color:white; font-family: 'Raleway', sans-serif; display:none; margin-top:120px;" id="third">So, we have to protect our rights from getting burned.</h3>
+
+<h3 style="color:white; font-family: 'Raleway', sans-serif; display:none;" id="forth">This is you,<strong> The Real Hero</strong></h3>
+<img style="display:none;" id="playerimage" src="player1.png" height="200" width="350"><br>
+<button style="font-family:'Raleway' , cursive; display:none;" id="letsplay" class="btn-info"><h4>Start</h4></button>
+<h3 style="color:white; font-family: 'Raleway', sans-serif; display:none;" id="fifth">Your objective is to reach to the top from jumping from platform to platform.</h3>
+
+
+
+<img style="display:none;" id="control123" src="control.jpg" height="350" width="400">
+
+</div>
+
+
+
+</body>
+
+</html>

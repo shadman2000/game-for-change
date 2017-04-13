@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<script language="javascript" type="text/javascript" src="p5.js"></script>
+<script language="javascript" src="p5.dom.js"></script>
+<script language="javascript" src="p5.sound.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script language="javascript" src="start.js"></script>
+<script type="text/javascript" src="start.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+<style>
+
+body{
+	background-color:black;
+}
+
+
+
+</style>
+
+<script>
+$(document).ready(function(){
+	$("#title").fadeIn(2500);
+	$("#yes").fadeIn(2500);
+	$("#no").fadeIn(2500);
+	$("#no").click(function(){
+		$("#title").fadeOut(1500);
+		$("#yes").fadeOut(1500);
+		$("#no").fadeOut(1500);
+		$("#nomessage").delay(2500).fadeIn(2500);
+		$("#home").delay(2500).fadeIn(2500);
+		$("#home").click(function(){
+			window.location.href="start.html";
+
+		});
+	});
+	$("#yes").click(function(){
+		window.location.href="index.html";
+	});
+});
+
+
+
+</script>
+
+
+</head>
+
+
+<body>
+
+<div id="main" style="text-align:center;">
+	<h1 id="title" style="margin-top:220px; font-family: 'Raleway', sans-serif; color:white; font-size:100px; display:none;"><strong>Keep Trying?</strong></h1>
+	<button style="margin-top:30px; margin-right:40px; display:none;" class="btn-success" id="yes"><h3>Yes</h3></button>
+	<button style="margin-top:30px; margin-right:80px; display:none;" class="btn-danger" id="no"><h3>No </h3></button>
+</div>
+
+<div style="text-align:center;">
+
+<h3  id="nomessage" style="margin-top:250px; font-family:'Raleway', sans-serif; color:white; display:none; font-size:70px;">Even if you quit the game, don't quit in real life. Fight for your rights!</h3>
+<button id="home" class="btn-info" style="display:none; margin-top:20px; margin-right:50px;"><h3>Home</h3></button>
+
+</div>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
