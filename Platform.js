@@ -156,7 +156,6 @@ function Platform(){
 		rect(this.x6,this.y6,this.width6,this.height6);
 		rect(this.x7,this.y7,this.width7,this.height7);
 		rect(this.x8,this.y8,this.width8,this.height8);
-		fill(255,0,0);
 		rect(this.x99,this.y99,this.width99,this.height99); //extra platform
 
 
