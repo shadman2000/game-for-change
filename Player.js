@@ -1,20 +1,17 @@
-function Player(){
-	this.x = 55;
-	this.y = 25;
-	this.height = 20;
-	this.width = 20;
-	this.gravity = 5;
-	this.speed = 0;
-	this.jump = 0;
-	this.score=0;
-	this.scorespeed=0;
-	this.curx;
-	this.jumpcheck = false;
-	this.img;
+function Player(){			//The Player object function
+	this.x = 55;			//Content of the player
+	this.y = 25;			//Content of the player
+	this.height = 20;		//Content of the player
+	this.width = 20;		//Content of the player
+	this.gravity = 5;		//Content of the player gravity to pull the character down
+	this.speed = 0;			//Content of the player this variable determines how fast the player can move(CHANGES IT"S VALUE WHEN KEYPRESSED FUNCTION IN index.js)
+	this.jump = 0;			//Content of the player this variable creates the jump speed (CHANGES IT"S VALUE WHEN KEYPRESSED FUNCTION IN index.js)		
+	this.curx;				//This variable let's the player jump a certain amount of the platform
+	this.jumpcheck = false;	//This boolean value let's the player to jump only when it's on a platform.
 
-	this.display = function(){
+	this.display = function(){		//The display function of the player to display itself and it's functionalities.
 		fill(0);
-		ellipse(this.x+2,this.y+20,this.width,this.height);
+		ellipse(this.x+2,this.y+20,this.width,this.height);		//Drawing the Player
 		fill(0,255,random(0,255));
 		rect(this.x-6,this.y+32,this.width-2,this.height+20);
 		fill(0,0,0);
@@ -28,13 +25,13 @@ function Player(){
 		
 	}
 
-	this.win = function(){
+	this.win = function(){		//Defining the win function
 		if(this.y <= -10){
-			window.location.href="win.html";
+			window.location.href="win.html";	//Conditional statement when it becomes true it opens another html page called win.html
 		}
 	}
 
-	this.move = function(){
+	this.move = function(){						//2nd half of the movement of the player (1st HLAF IN index.js)
 	this.x+=this.speed;
 	this.y+=this.jump;
 		if(this.speed === 3){
@@ -45,7 +42,7 @@ function Player(){
 		}	
 	}
 
-	this.col = function(){
+	this.col = function(){						//Collision detection function
 		if(this.y+60+this.height >= platform.y0-2 && this.y+60+this.height <= platform.y0+platform.height0 && this.x+this.width >= platform.x0 && this.x <= platform.x0+platform.width0){
 			this.gravity = 0;
 			this.y = platform.y0-this.height-60;
@@ -123,7 +120,7 @@ function Player(){
 	}
 
 
-		this.botcol = function(){
+		this.botcol = function(){ //IGNORE!!
 		if(this.y === platform.y+platform.height && this.x >= platform.x+platform.height && this.x <= platform.x+platform.width){
 			hero.jump = 0;
 		}
@@ -156,7 +153,7 @@ function Player(){
 		}
 	}
 
-	this.jump0 = function(){
+	this.jump0 = function(){		//jump0 function allows the player to jump only a certain height of a platform
 		if(this.y === this.curx){
 		this.y+=this.jump;
 		}
