@@ -7,7 +7,7 @@ function Platform(){				//Start of Platform object function
 	this.platformgravity=1.95;		
 	this.platformgravityspeed=0.0009;
 
-	this.gravity=2.0;				//The speed in which the platforms are going to come down.
+	this.gravity=2.5;				//The speed in which the platforms are going to come down.
 
 	this.x99 = 55;					//defining each platform's contents.
 	this.y99 = 275;
