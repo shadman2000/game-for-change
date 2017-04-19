@@ -58,7 +58,7 @@ function keyReleased(){				//Defining the movement of player when key is release
 	if(keyCode===LEFT_ARROW){		//When you release the left arrow key
 		hero.speed+=3.5;
 	}
-	if(keyCode===CONTROL){			//when you release the ctrl key
+	if(keyCode===UP_ARROW){			//when you release the ctrl key
 		if(hero.jump === -8){
 			hero.jump+=8;
 		}
