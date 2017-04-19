@@ -46,7 +46,7 @@ function keyPressed(){				//Defining the movement of player of keyboard (MAIN GA
 	else if(keyCode===LEFT_ARROW){	//Function of Left Arrow
 		hero.speed-=3.5;
 	}
-	else if(keyCode===CONTROL && hero.jumpcheck == true){		//Defining when the player can jump and ctrl to jump (BOLLEAN VALUE IN COLLISION FUNCTION)
+	else if(keyCode===ALT && hero.jumpcheck == true){		//Defining when the player can jump and ctrl to jump (BOLLEAN VALUE IN COLLISION FUNCTION)
 		hero.jump-=8;	
 	}
 }
