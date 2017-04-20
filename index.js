@@ -1,7 +1,6 @@
 var canvas;			//The canvas holding variable;
 var hero;			//The hero under the Player class
 var platform;		//the platform under the Platform class
-var img;
 
 function setup(){
 	canvas = createCanvas(560,560);				//Drawing the Canvas
@@ -32,7 +31,6 @@ function draw(){
 	fill(255,255,255,150);
 
 	text("The Real Hero",width/3+30,20);
-	console.log(hero.jumpcheck);
 
 }
 
