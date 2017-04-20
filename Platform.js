@@ -68,6 +68,8 @@ function Platform(){				//Start of Platform object function
 	this.gameover = function(){		//The gameover function
 		if(hero.y >= 450){			//Conditional statement when the position of hero(y) goes more than 450
 			window.location.href="lose.html";	//Opens another html page named lose.html
+			this.platformgravity=0;
+			hero.gravity=0;
 		}
 	}
 
