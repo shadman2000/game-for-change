@@ -68,63 +68,6 @@ function Platform(){				//Start of Platform object function
 	this.gameover = function(){		//The gameover function
 		if(hero.y >= 450){			//Conditional statement when the position of hero(y) goes more than 450
 			window.location.href="lose.html";	//Opens another html page named lose.html
-	this.x99 = 55;
-	this.y99 = 25;
-	this.width99 = 0;
-	this.height99 = 0;
-
-	this.x0=295;
-	this.y0=500;
-	this.width0=0;
-	this.height0=0;
-
-	this.x=219;
-	this.y=438;
-	this.width=0;
-	this.height=0;
-
-	this.x2=75;
-	this.y2=374;
-	this.width2=0;
-	this.height2=0;
-
-	this.x3=228;
-	this.y3=310;
-	this.width3=0;
-	this.height3=0;
-
-	this.x4=372;
-	this.y4=245;
-	this.width4=0;
-	this.height4=0;
-
-	this.x5=228;
-	this.y5=180;
-	this.width5=0;
-	this.height5=0;
-
-	this.x6=115;
-	this.y6=118;
-	this.width6=0;
-	this.height6=0;
-
-	this.x7=221;
-	this.y7=56;
-	this.width7=0;
-	this.height7=0;
-
-	this.x8=340;
-	this.y8=1;
-	this.width8=0;
-	this.height8=0;
-
-	this.x9=330;
-	this.y9=549;
-	this.width9=118;
-	this.height9=10;
-	hero.score=0;
-	hero.score+=hero.scorespeed;
-			
 		}
 	}
 
