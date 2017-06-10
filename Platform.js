@@ -4,7 +4,7 @@ function Platform(){				//Start of Platform object function
 	this.g =  random(0,255);		//the random value of g (r,g,b) for platform color
 	this.b = random(0,255);			//the random value of b (r,g,b) for platform color
 
-	this.platformgravity=1.55;		
+	this.platformgravity=1.4;		
 	this.platformgravityspeed=0.0009;
 
 	this.gravity=1.5;				//The speed in which the platforms are going to come down.
